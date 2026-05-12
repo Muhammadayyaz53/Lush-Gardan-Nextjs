@@ -75,6 +75,11 @@ export type DesignCard = {
   isFavorite?: boolean;
 };
 
+export type DesignCardResponse = {
+  heading: string;
+  cards: DesignCard[];
+};
+
 /* =========================
    ABOUT
 ========================= */
