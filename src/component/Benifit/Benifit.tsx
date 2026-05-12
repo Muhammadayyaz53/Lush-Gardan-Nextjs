@@ -2,7 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ApiResponse } from "@/type";
+
+type BenefitCard = {
+  id: string | number;
+  title: string;
+  description: string;
+  highlight?: boolean;
+};
+
+type ApiResponse = {
+  heading: string;
+  cards: BenefitCard[];
+};
 
 const staticImages = [
   "/Time-Cosuming.png",
@@ -12,7 +23,7 @@ const staticImages = [
 ];
 
 export default function Benefits() {
-  const [data, setData] = useState<ApiResponse>({
+  const [data, setData] =useState<ApiResponse>({
     heading: "",
     cards: [],
   });

@@ -1,3 +1,7 @@
+/* =========================
+   MENU / FOOTER
+========================= */
+
 export type MenuItem = {
   label: string;
   href: string;
@@ -7,6 +11,11 @@ export type FooterLink = {
   label: string;
   href: string;
 };
+
+/* =========================
+   HERO
+========================= */
+
 export type HeroButton = {
   text: string;
   href: string;
@@ -25,6 +34,9 @@ export type HeroContent = {
   buttons: Button[];
 };
 
+/* =========================
+   GALLERY
+========================= */
 
 export type GalleryImage = {
   id: number;
@@ -33,39 +45,39 @@ export type GalleryImage = {
   span?: string;
 };
 
-export type ApiResponse = {
-   cards: BenefitCard[];
-};
+/* =========================
+   BENEFIT SECTION
+========================= */
 
-export  type BenefitCard = {
+export type BenefitCard = {
   id: number;
   title: string;
   description: string;
   highlight?: boolean;
 };
 
-export type Blog = {
-  image: string;
-  title: string;
-  desc: string;
-  date: string;
+export type ApiResponse = {
+  heading: string;
+  description?: string;
+  cards: BenefitCard[];
 };
 
+/* =========================
+   DESIGN CARD
+========================= */
 
-export type Testimonial = {
-  name: string;
-  text: string;
-  avatar: string;
-  plantImg: string;
-};
-
-export type FormField = {
+export type DesignCard = {
   id: number;
-  type: string;
-  placeholder: string;
-  name: string;
+  title: string;
+  oldPrice: string;
+  newPrice: string;
+  image?: string;
+  isFavorite?: boolean;
 };
 
+/* =========================
+   ABOUT
+========================= */
 
 export type AboutCard = {
   title: string;
@@ -78,12 +90,35 @@ export type AboutData = {
   cards: AboutCard[];
 };
 
-export type cards = {
-  isFavorite?: boolean;
-  image?: string;
-  id: number;
+/* =========================
+   BLOG
+========================= */
+
+export type Blog = {
+  image: string;
   title: string;
-  oldPrice: string;
-  newPrice: string;
+  desc: string;
+  date: string;
 };
 
+/* =========================
+   TESTIMONIAL
+========================= */
+
+export type Testimonial = {
+  name: string;
+  text: string;
+  avatar: string;
+  plantImg: string;
+};
+
+/* =========================
+   FORM
+========================= */
+
+export type FormField = {
+  id: number;
+  type: string;
+  placeholder: string;
+  name: string;
+};
